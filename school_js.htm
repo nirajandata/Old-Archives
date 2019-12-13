@@ -1,0 +1,20 @@
+<center>
+<input type="textbox" id="calc-input"  />
+<input id="btn" type="button" onclick="doCalc()" value="Find Value" />
+<h3>The result is :</h3><h3 id="res"> </h3>
+</center>
+<script type="text/javascript">
+   var inp = document.getElementById('calc-input'); 
+   function doCalc(){  
+     var x = eval(inp.value); 
+	 var result =document.getElementById('res')
+	 result.innerHTML=x;
+	 x=0;
+   }
+  inp.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("btn").click();
+  }
+});
+</script>
