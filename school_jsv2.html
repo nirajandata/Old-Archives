@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+</head>
+<body>
+<script>
+function dis(val)
+{
+document.getElementById("cal").value+=val
+ }
+
+function solve()
+{
+let x = document.getElementById("cal").value
+let y = eval(x)
+document.getElementById("cal").value = y
+}
+
+function clr()
+{
+document.getElementById("cal").value = ""
+}
+</script>
+<body>
+	<center>
+		<div class = title ><h1>Simple Calculator</h1></div>
+<table border="1">
+<tr>
+<td><input type="button" class="cl" value="c" onclick="clr()"/> </td>
+<td colspan="3"><input type="text" placeholder="0" id="cal"/></td>
+</tr>
+<tr>
+<td><input type="button" value="+" onclick="dis('+')"/> </td>
+<td><input type="button" value="1" onclick="dis('1')"/> </td>
+<td><input type="button" value="2" onclick="dis('2')"/> </td>
+<td><input type="button" value="3" onclick="dis('3')"/> </td>
+</tr>
+<tr>
+<td><input type="button" value="-" onclick="dis('-')"/> </td>
+<td><input type="button" value="4" onclick="dis('4')"/> </td>
+<td><input type="button" value="5" onclick="dis('5')"/> </td>
+<td><input type="button" value="6" onclick="dis('6')"/> </td>
+</tr>
+<tr>
+<td><input type="button" value="*" onclick="dis('*')"/> </td>
+<td><input type="button" value="7" onclick="dis('7')"/> </td>
+<td><input type="button" value="8" onclick="dis('8')"/> </td>
+<td><input type="button" value="9" onclick="dis('9')"/> </td>
+</tr>
+<tr>
+<td><input type="button" value="/" onclick="dis('/')"/> </td>
+<td><input type="button" value="." onclick="dis('.')"/> </td>
+<td><input type="button" value="0" onclick="dis('0')"/> </td>
+<td><input type="button" value="=" onclick="solve()"/> </td>
+</tr>
+</table>
+
+	</center>
+<style>
+.title{
+
+margin: 10px;
+display: inline;
+font-family: sans-serif;
+text-align:center;
+width: 210px;
+color:#000;
+font-style: italic;
+word-spacing: 7px;
+}
+input[type="button"]
+{
+border-radius: 10px;
+background-color: #fff;
+color: black;
+padding: 20px;
+width:100%;
+}
+input[type="text"]
+{
+border-radius: 10px;
+text-align: right;
+background-color:white;
+border-color: black ;
+width:100%
+font-weight:100;
+font-family: sans-serif;
+}
+tr, td {
+    border: none;
+}
+#cal{
+  background-color: #222222;
+  color: #fff;
+  font-size: 1.714285714em;
+  padding: 0.5em 0.75em;
+  text-align: right;
+}
+table{
+  border-radius: 10px;
+  padding: 10px;
+  border-collapse: collapse;
+  box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #000;
+  margin-top: 2em;
+  max-width: 15em;
+  overflow: hidden;
+
+}
+</style>
+</body>
+</html>
