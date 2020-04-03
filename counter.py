@@ -1,5 +1,4 @@
 from tkinter import *
-import pickle
 # pip install pillow
 from PIL import Image, ImageTk
 class Window(Frame):
