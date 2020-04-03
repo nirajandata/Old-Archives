@@ -1,5 +1,5 @@
 from tkinter import *
-
+import pickle
 # pip install pillow
 from PIL import Image, ImageTk
 class Window(Frame):
@@ -16,12 +16,14 @@ class Window(Frame):
 
         
 root = Tk()
+L = Label(root, text="No clicks yet.")
+L.pack()
 app = Window(root)
 root.wm_title("Counter")
 root.geometry("540x600")
 
-#counting function :P  
-# Don't blame me for the messy code !
+#counting function  
+# Don't blame me for the messy code :P !
 root.counter = 0
 def clicked():
     root.counter += 1
@@ -29,13 +31,14 @@ def clicked():
     if root.counter > 110:
         hyper = tk.Label(root, text="1 time !")
         hyper.pack()
+
 def resets():
 	root.counter=0
 	L['text'] = 'No clicks yet.'
-b = Button(root, text="Click", command=clicked)
-b.pack()
+b = Button(root, text="Click",width= command=clicked)
+
+b.pack(fill=Y, side=LEFT)
 r = Button(root, text="reset", command=resets)
-b.pack()
-L = Label(root, text="No clicks yet.")
-L.pack()
+r.pack(fill=Y, side=RIGHT)
+
 root.mainloop()
