@@ -27,8 +27,8 @@ root.counter = 0
 def clicked():
     root.counter += 1
     L['text'] = str(root.counter)
-    if root.counter > 110:
-        hyper = tk.Label(root, text="1 time !")
+    if root.counter > 80:
+        hyper = Label(root, text="Ho gaya vai !")
         hyper.pack()
 
 def resets():
