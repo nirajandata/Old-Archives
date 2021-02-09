@@ -34,7 +34,7 @@ def clicked():
 def resets():
 	root.counter=0
 	L['text'] = 'No clicks yet.'
-b = Button(root, text="Click",width= command=clicked)
+b = Button(root, text="Click",command=clicked)
 
 b.pack(fill=Y, side=LEFT)
 r = Button(root, text="reset", command=resets)
